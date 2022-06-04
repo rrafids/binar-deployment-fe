@@ -30,7 +30,7 @@ export default function Register() {
       userToRegisterPayload.append("picture", pictureField);
 
       const registerRequest = await axios.post(
-        "http://localhost:2000/auth/register",
+        "https://binar-instagram-api.herokuapp.com/auth/register",
         userToRegisterPayload,
         {
           headers: {
