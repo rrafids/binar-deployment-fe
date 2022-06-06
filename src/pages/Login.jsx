@@ -25,9 +25,9 @@ export default function Login() {
         email: emailField.current.value,
         password: passwordField.current.value,
       };
-
+      
       const loginRequest = await axios.post(
-        "https://binar-instagram-api.herokuapp.com/auth/login",
+        `${process.env.REACT_APP_INSTAGRAM_BE_API}/auth/login`,
         userToLoginPayload
       );
 
