@@ -1,9 +1,10 @@
 import { useRef, useState } from "react";
-import { Form, Container, Button, Alert } from "react-bootstrap";
+import { Form, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GoogleLogin } from "@react-oauth/google";
+import Button from "../components/button";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -107,9 +108,7 @@ export default function Login() {
         {errorResponse.isError && (
           <Alert variant="danger">{errorResponse.message}</Alert>
         )}
-        <Button className="w-100" type="submit">
-          Masuk
-        </Button>
+        <Button type="submit" textLabel="Masuk" variant="danger" />
       </Form>
     </Container>
   );
